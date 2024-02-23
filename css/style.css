@@ -1,0 +1,171 @@
+body,
+p,
+h1,
+ul,
+li {
+    padding: 0px;
+}
+
+h3 {
+    color: #494949
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0 10%;
+}
+
+p {
+    font-size: 12;
+}
+
+a {
+    text-decoration: none;
+}
+
+.estrutura {
+    display: grid;
+    grid-template-columns: minmax(200px, 1.2fr) 2fr;
+    grid-template-rows: 110px;
+    grid-template-areas: "logo header" "perfil conteudo" "footer footer";
+    row-gap: 5px;
+    column-gap: 5%;
+    background-color: #fff;
+    font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media(max-width: 1200px) {
+    .estrutura {
+        grid-template-columns: minmax(200px, 1.2fr) 2fr;
+        grid-template-areas: "logo header" "perfil conteudo" "footer footer";
+    }
+    body {
+        margin: 0% 10px;
+    }
+    .prefil img {
+        margin: auto auto;
+    }
+}
+
+@media (max-width: 740px) {
+    .estrutura {
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo" "perfil" "header" "conteudo" "footer";
+    }
+    .header nav ul li a{
+        font-size: 20px;
+    }
+    .header {
+        margin-top: 150px;
+    }
+    .info {
+        height: 20px;
+    }
+    .perfil p {
+        text-align: center;
+    }
+    
+}
+
+.logo {
+    display: grid;
+}
+
+.logo a {
+    display: block;
+    margin: auto auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #222;
+    margin: 0 0 20px
+}
+
+h1 {
+    color: rgb(27, 49, 189);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px
+}
+
+.header {
+    grid-area: header;
+    padding: 24px;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+.header nav a {
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 100px;
+}
+
+.header nav a:hover {
+    background: #DECAF9;
+    opacity: 0.1;
+}
+
+.header li {
+    margin: auto auto;
+}
+
+.header nav ul li a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.perfil {
+    grid-area: perfil;
+}
+
+.info {
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.perfil img {
+    width: 280px;
+    border-radius: 100px;
+    display: block;
+    margin: auto auto;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    padding-left: 23px;
+}
+
+.conteudo p {
+    font: 15px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #727272;
+}
+
+.conteudo li {
+    border-bottom: 1px solid rgb(221, 215, 228);
+    margin-bottom: 10px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
